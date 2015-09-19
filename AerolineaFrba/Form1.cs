@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace AerolineaFrba
 {
@@ -14,7 +16,69 @@ namespace AerolineaFrba
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();  
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            if (!validoParametros(textoUsuario, textoPass))
+            {
+                MessageBox.Show("Ingrese todos los valores");
+            }
+            else
+            {
+                MessageBox.Show("VALIDO"); /* Validar logueo, de ser ok enviar al formulario principal. De ser error incrementar el valor del intentos y loguearlo*/
+            }
+            SqlConnection con = new SqlConnection();
+            string datosConexion = "Data Source=GASTON\\SQLSERVER2012;" + "Initial Catalog=GD2C2015;" + "Integrated Security=true;"
+                + "UID=gd" + "PWD=gd2015";
+
+            con.ConnectionString = datosConexion;
+
+            try
+            {
+                con.Open();
+               
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
+        private string SHA256Encripta(string input)
+        {
+            SHA256CryptoServiceProvider provider = new SHA256CryptoServiceProvider();
+
+            byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+            byte[] hashedBytes = provider.ComputeHash(inputBytes);
+
+            StringBuilder output = new StringBuilder();
+
+            for (int i = 0; i < hashedBytes.Length; i++)
+                output.Append(hashedBytes[i].ToString("x2").ToLower());
+
+            return output.ToString();
+        }
+        private Boolean validoParametros(TextBox usuario, TextBox pass)
+        {
+            if (usuario.Text == string.Empty || pass.Text == string.Empty)
+                return false;
+            else
+                return true;
         }
     }
 }

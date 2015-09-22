@@ -10,10 +10,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 
+
 namespace AerolineaFrba
 {
     public partial class Form1 : Form
     {
+        conexion funciones_conexion ;
         public Form1()
         {
             InitializeComponent();  

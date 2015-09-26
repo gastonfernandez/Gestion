@@ -11,73 +11,49 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 
 
+
 namespace AerolineaFrba
 {
     public partial class Form1 : Form
     {
-        conexion funciones_conexion ;
+        
         public Form1()
         {
+            
             InitializeComponent();  
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Ingresar_click(object sender, EventArgs e)
         {
-
-
-            if (!validoParametros(textoUsuario, textoPass))
-            {
-                MessageBox.Show("Ingrese todos los valores");
-            }
-            else
-            {
-                MessageBox.Show("VALIDO"); /* Validar logueo, de ser ok enviar al formulario principal. De ser error incrementar el valor del intentos y loguearlo*/
-            }
-            SqlConnection con = new SqlConnection();
-            string datosConexion = "Data Source=GASTON\\SQLSERVER2012;" + "Initial Catalog=GD2C2015;" + "Integrated Security=true;"
-                + "UID=gd" + "PWD=gd2015";
-
-            con.ConnectionString = datosConexion;
-            
-
+           /* el pass de prueba que use es asd para el usuario PEPE*/
+          
             try
             {
-                con.Open();
-                /* ejemplo para tomar variable
-                 */
-                //string textoCmd = "SELECT @cantidad = COUNT(*) FROM TABLET "+ "WHERE PRECIO >@precio";
-
-                //SqlCommand cmd = new SqlCommand(textoCmd,con);
-
-               // SqlParameter p1 = new SqlParameter("@precio", Convert.ToInt32(textBox_precio.Text));
-                //p1.Direction = ParameterDirection.Input;
-
-                //SqlParameter p2 = new SqlParameter("@cantidad", null);
-                //p2.Direction = ParameterDirection.Output;
-                //p2.SqlDbType = SqlDbType.Int;
-
-                //cmd.Parameters.Add(p1);
-               // cmd.Parameters.Add(p2);
-               // cmd.Parameters["@cantidad"].Value;
+                #region ValidarParametros
+                if (!validoParametros(textoUsuario, textoPass))
+                {
+                    MessageBox.Show("Ingrese todos los valores");
+                    
+                }
+                else
+                {
+                    DataTable dt = new BasedeDatos().select_query(" select usuario_ID , USERNAME, PASS from dbo.USUARIO;");
+                    //DataTable dt = new BasedeDatos().select_query("select	pass from	USUARIO where	USERNAME= '" + textoUsuario + "';");
                
+
+                    MessageBox.Show("VALIDO"); /* Validar logueo, de ser ok enviar al formulario principal. De ser error incrementar el valor del intentos y loguearlo*/
+                }
+                #endregion
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Se ha producido un error en el momento de realizar el logueo consulte al administrador" + ex.Message);
             }
-            finally
-            {
-                con.Close();
-            }
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
+                
             
-
-
         }
+
+      
         private string SHA256Encripta(string input)
         {
             SHA256CryptoServiceProvider provider = new SHA256CryptoServiceProvider();

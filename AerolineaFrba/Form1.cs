@@ -37,7 +37,7 @@ namespace AerolineaFrba
                 }
                 else
                 {
-                    DataTable dt = new BasedeDatos().select_query(" select usuario_ID , USERNAME, PASS from dbo.USUARIO;");
+                    //DataTable dt = new BasedeDatos().select_query(" select usuario_ID , USERNAME, PASS from dbo.USUARIO;");
                     //DataTable dt = new BasedeDatos().select_query("select	pass from	USUARIO where	USERNAME= '" + textoUsuario + "';");
                
 

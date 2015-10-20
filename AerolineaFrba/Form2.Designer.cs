@@ -1,6 +1,6 @@
 ﻿namespace AerolineaFrba
 {
-    partial class BasedeDatos
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // BasedeDatos
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "BasedeDatos";
-            this.Text = "BasedeDatos";
-            this.Load += new System.EventHandler(this.BasedeDatos_Load);
+            this.Name = "Form2";
+            this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
         }

@@ -12,3 +12,18 @@ C:\Users\gasto_000\Desktop\facu\gestion\Aplicacion Desktop\AerolineaFrba\Aerolin
 C:\Users\gasto_000\Desktop\facu\gestion\Aplicacion Desktop\AerolineaFrba\AerolineaFrba\bin\Debug\EntityFramework.xml
 C:\Users\gasto_000\Desktop\facu\gestion\Aplicacion Desktop\AerolineaFrba\AerolineaFrba\obj\Debug\AerolineaFrba.Abm_Ciudad.Form1.resources
 C:\Users\gasto_000\Desktop\facu\gestion\Aplicacion Desktop\AerolineaFrba\AerolineaFrba\obj\Debug\AerolineaFrba.BasedeDatos.resources
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\bin\Debug\AerolineaFrba.exe.config
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.exe
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.pdb
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\bin\Debug\AerolineaFrba.exe
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\bin\Debug\AerolineaFrba.pdb
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\bin\Debug\EntityFramework.dll
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\bin\Debug\EntityFramework.xml
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.csprojResolveAssemblyReference.cache
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.Abm_Aeronave.Form1.resources
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.Abm_Ciudad.Form1.resources
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.Form1.resources
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.Properties.Resources.resources
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.csproj.GenerateResource.Cache
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.Form2.resources
+C:\Users\SP\Documents\GitHub\Gestion\AerolineaFrba\obj\Debug\AerolineaFrba.Form3.resources

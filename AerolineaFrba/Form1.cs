@@ -14,6 +14,7 @@ using AerolineaFrba.Mappings;
 
 
 
+
 namespace AerolineaFrba
 {
     public partial class Form1 : Form
@@ -39,6 +40,7 @@ namespace AerolineaFrba
                 }
                 else
                 {
+
                     #region ObtenerUsuario
                     Usuario usu = new Usuario();
 
@@ -51,6 +53,7 @@ namespace AerolineaFrba
                         MessageBox.Show("Se ha logueado correctamente"); /* aca hay que hacer lo que siga*/
 
                     }
+
                 #endregion
             }
             catch (Exception ex)
@@ -61,7 +64,6 @@ namespace AerolineaFrba
             
         }
 
-   
       
       
         private Boolean validoParametros(TextBox usuario, TextBox pass)

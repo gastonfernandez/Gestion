@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 
-namespace AerolineaFrba
+namespace AerolineaFrba.Mappings
 {
     public partial class BasedeDatos : Form
     {
@@ -80,3 +80,4 @@ namespace AerolineaFrba
 
     }
 }
+

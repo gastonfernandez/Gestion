@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace AerolineaFrba
 {
     public partial class BasedeDatos : Form
@@ -24,7 +23,7 @@ namespace AerolineaFrba
 
         }
 
-        private SqlConnection conexion = new SqlConnection("Data Source=GASTON\\SQLSERVER2012;" + "Initial Catalog=GD2C2015;" + "Integrated Security=true;"
+        SqlConnection conexion = new SqlConnection("Data Source=GASTON\\SQLSERVER2012;" + "Initial Catalog=GD2C2015;" + "Integrated Security=true;"
                 + "UID=gd" + "PWD=gd2015");
 
 
@@ -34,25 +33,6 @@ namespace AerolineaFrba
         }
 
         public void closeConnection() { conexion.Close(); }
-
-        public void query(String query)
-        {
-            try
-            {
-                conexion.Open();
-                SqlCommand queryCommand = new SqlCommand(query, conexion);
-                SqlDataReader queryCommandReader = queryCommand.ExecuteReader();
-            
-                conexion.Close();
-               
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message + " Query: " + query);
-
-            }
-        }
 
         public DataTable select_query(String query)
         {
